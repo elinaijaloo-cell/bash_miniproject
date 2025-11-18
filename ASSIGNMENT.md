@@ -5,7 +5,7 @@
 This mini-project will test your ability to use bash commands and Git/GitHub to analyze real biological sequence data. You will work with genomic scaffold data and protein database records to perform common bioinformatics tasks using the command line.
 
 **Estimated Time**: 6-10 hours
-**Due Date**: [Instructor will specify]
+**Due Date**: 26th November 2025
 **Submission**: GitHub repository URL
 
 ---
@@ -42,7 +42,7 @@ You will work with two data files located in the `Data/` directory:
 ### Part 1: Fork, Clone, and Setup (Required First Step)
 
 **Task 1.1**: Fork the starter repository
-- Navigate to the instructor's starter repository on GitHub: `[INSTRUCTOR_GITHUB_URL]`
+- Navigate to the instructor's starter repository on GitHub: `https://github.com/kipkurui/bash_miniproject`
 - Click the "Fork" button in the top-right corner
 - This creates a copy of the repository under your GitHub account
 - Your forked repository will be named: `bash_miniproject`
@@ -86,7 +86,6 @@ You will work with two data files located in the `Data/` directory:
 - The starter file already excludes some items
 - Add additional patterns to exclude:
   - Temporary files (`*.tmp`, `*~`)
-  - Output directories (`results/`, `output/`)
   - Any editor backup files specific to your editor
 
 **Task 1.7**: Make your first commit
@@ -149,16 +148,7 @@ Create a script `scripts/filter_by_length.sh` that:
 - Saves the filtered headers to `results/filtered_sequences.txt`
 - Prints summary: "Found X sequences with length >= Y bases"
 
-**Task 3.2**: Coverage analysis
-Create a script `scripts/coverage_stats.sh` that:
-- Extracts the coverage value from all sequence headers
-- Calculates:
-  - Minimum coverage
-  - Maximum coverage
-  - Average coverage (you may use `awk` for calculation)
-- Saves results to `results/coverage_summary.txt` in a readable format
-
-**Task 3.3**: High-quality scaffolds
+**Task 3.2**: High-quality scaffolds
 Create a script `scripts/high_quality_scaffolds.sh` that:
 - Identifies scaffolds meeting BOTH criteria:
   - Length >= 10000 bases
@@ -193,18 +183,6 @@ Create a script `scripts/search_proteins.sh` that:
 - Displays the matching protein IDs and descriptions
 - Saves results to `results/protein_search_results.txt`
 
-**Task 4.4**: Top genes analysis
-Create a script `scripts/top_genes.sh` that:
-- Identifies which genes have the most protein entries
-- Lists the top 10 genes by frequency
-- Saves to `results/top_10_genes.txt` in format:
-  ```
-  Count  Gene_Name
-  150    GENE1
-  120    GENE2
-  ...
-  ```
-
 **Git checkpoint**: Commit your Part 4 work with message: "Add protein database analysis scripts"
 
 ---
@@ -221,8 +199,7 @@ Write a script `scripts/run_analysis.sh` that:
 - Runs all previous analyses in sequence:
   1. FASTA exploration
   2. Sequence filtering
-  3. Coverage statistics
-  4. Protein database analysis
+  3. Protein database analysis
 - Creates the `results/` directory if it doesn't exist
 - Prints progress messages as each analysis completes
 - Generates a final summary file `results/analysis_summary.txt` containing:
