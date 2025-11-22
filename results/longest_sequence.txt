@@ -1,0 +1,3 @@
+longestsequence: NODE_1
+length: 21257
+coverage: 6.323607
