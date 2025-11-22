@@ -23,3 +23,7 @@ __pycache__/
 # - Temporary files (*.tmp, *~)
 # - Output directories (results/, output/)
 # - Any editor-specific backup files
+
+# Temporary files
+*.tmp
+*~
